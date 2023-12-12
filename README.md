@@ -1,11 +1,6 @@
 # Final Project: Belay (a Slack clone)
 
 40 points
-## NOTE: I collaborated with a peer in the course, Keval Hutheesing, and used the following resources to aid with various aspects of this project:
-- Full Stack Realtime Chat App Tutorial: https://www.youtube.com/watch?v=MJzbJQLGehs
-- jQuery tutorial: https://www.w3schools.com/jquery/
-- Building Slack UI with pure HTML5, CSS3 and JavaScript: https://dev.to/sirneij/building-slack-ui-with-pure-html5-css3-and-javascript-the-power-of-css-grids-and-flexbox-4ban
-- How to Use Fetch with Flask in JavaScript/Python: https://www.youtube.com/watch?v=exRAM1ZWm_s&t=9s
 
 **DUE: Friday, March 10 by 5:30pm**
 
