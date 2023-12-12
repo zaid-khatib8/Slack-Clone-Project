@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Belay</title>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- login and signup -page-->
+    <div id="login-signup-page" class="login-signup-page" style="display:block;"> 
+        <h2>Belay: A Slack clone</h2>
+        <div id="login" class="login">
+            <h3>Please login:</h3>
+            <input name="username"></input>
+            <label for="username">Username</label>
+            <br>
+            <input type="password" name="password">
+            <label for="password">Password</label>
+            <br>
+            <br>
+            <button type="submit" onclick="login()">Login</button>
+            <br>
+            <br>
+        </div>
+        <div id="signup" class="signup">
+            <h3>No account?</h3>
+                <p>Please provide the following information to create an account:</p>
+                <input name="created-username"></input>
+                <label for="created-username">Username</label>
+                <br>
+                <input type="password" name="created-password">
+                <label for="created-password">Password</label>
+                <br>
+                <input type="password" name="retyped-password">
+                <label for="retyped-password">Retype password</label>
+                <br>
+                <br>
+                <button type="submit" onclick="signup()">Signup</button>
+                <br>
+                <br>
+            </div>
+    </div>
+
+<!-- Main page elements (includes, sidebar, main message thread, replies)-->
+	<div id="mainPage" class="mainPage" style="display: none;">
+		<div class="username-display">
+			<p id="welcome-username"> Testing</p>
+			<input name="change-username" style="width:50%"></input>
+			<button type="submit" onclick="changeUsername()">Change Username</button>
+			<br>
+			<input type="password" name="change-password" style="width:50%">
+			<button type="submit" onclick="changePassword()">Change Password</button>
+			<br>
+			<button type="submit" onclick="logout()">Logout.</button>
+		</div>
+		
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class = "container">
+				<h3 style="text-decoration: underline;">Channel List</h3>
+			</div>
+
+			<div class="container">
+				<div id="new-channel-button">
+					<input name="new-channel" style="width:50%"></input>
+					<button type="submit" onclick="newChannel()">Create Channel</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div class="chat-page" style="margin-left:25%">
+			<div class="chat-page-title-container">
+			    <h1 id="chatPageChannelName"></h1>
+			</div>
+			<div id="message-history">
+			</div>
+
+			<div class="chat-page-content-big-container">
+				<div id="messageContentContainer">
+					<div id="chat-page-more-message" style="display: block;">
+					</div>
+				</div>
+			</div>
+
+			<div class="chat-page-send-container">
+			    <div class="chat-page-send-form-container">
+
+			        <label class="input"></label>
+			        <textarea id="postMessageTextArea" placeholder="Type your message here..." class="input" required></textarea>
+			        <br>
+
+			        <button id="message-send-button" onclick="postMessage()">Send</button>
+			    </div>
+			</div>
+
+		</div>
+
+		<!-- Reply Thread -->
+		<div id="replyThread" style="display: none;">
+			<h3 id="replyThreadTitle"></h3>
+			<p id="threadReplyId"></p>
+		    <div id="replyThreadContainer">		
+				<button id="close-replies-button" >Close</button>		
+			    <div class="thread-page-send-form-container">
+			        <label class="input"></label>
+			        <textarea id="postReplyTextArea" placeholder="Type your reply here..." class="input" required></textarea>
+			        <br>
+			        <button id="sendReplyButton" onclick="postReply()">Send</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<script src="http://localhost:5000/static/script.js"></script>
+</body>
+
+
+
