@@ -10,6 +10,7 @@ import random
 import sqlite3
 from flask import * # Flask, g, redirect, render_template, request, url_for
 
+
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
