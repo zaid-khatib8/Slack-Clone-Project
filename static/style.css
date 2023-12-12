@@ -1,0 +1,401 @@
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*General style elements*/
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+
+
+a {
+	font-size: 20px;
+	line-height: 1.7;
+	color: #7940ba;
+	margin: 0px;
+	transition: all 0.4s;
+}
+
+
+
+a:hover {
+	text-decoration: none;
+  color: #333333;
+}
+
+
+
+p {
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+}
+ 
+.message-username {
+  font-size:smaller;
+  font-style:initial;
+}
+
+.message-text {
+  font-size: medium;
+  font-style: oblique;
+}
+
+
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+/*Emoji style elements*/
+.emoji-button {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+}
+
+
+.emoji-button:click {
+  background-color: yellow;
+}
+
+.emoji-button-reply {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+}
+
+.emoji-button-reply:click {
+  background-color: yellow;
+}
+
+.emoji-overlay {
+  position: fixed;
+  display: none;
+  height: 20px;
+  width: 80px;
+  background-color: lightblue;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*Sidebar (left) elements*/
+
+.sidebar {
+  height: 80%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border: solid;
+}
+
+/*Username display box elements*/
+.username-display {
+  height: 40%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: white;
+  border: 2px solid grey; 
+}
+
+.sidebar-welcome p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+
+.channelNameContainer {
+  display: flex;
+  padding-left: 0px;
+  border: solid;
+  border-radius: 10%;
+}
+.channelNameContainer:hover {
+  background-color:#36C5F0;
+}
+
+
+.sidebar-channel {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: inline;
+}
+
+
+.sidebar-channel:hover {
+  color: #57b846;
+  transition: 0.5s;
+}
+
+
+.channelUnreadCount {
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+}
+
+
+
+
+
+
+
+/*------CHAT PAGE------*/
+/*------CHAT PAGE------*/
+/*------CHAT PAGE------*/
+/*------CHAT PAGE------*/
+/*------CHAT PAGE------*/
+.chat-page {
+  margin-left: 140px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+/* title */
+.chat-page-title-container {
+  height: 15%;
+  width: 70%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .chat-page-title-container {
+    width: 90%;
+  }
+}
+
+#chat-page-title-name {
+  text-decoration: none;
+  font-size: 40px;
+  color: #57b846;
+  display: block;
+  margin-right: 20px;
+}
+
+/* content */
+.chat-page-content-big-container {
+  height: 70%;
+  width: 75%;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  border-top: 2px solid grey; 
+  background-color: transparent;
+  overflow-x: hidden;
+}
+
+#messageContentContainer {
+  padding: 6px 8px 6px 16px;
+}
+
+.messageContent {
+  background-color: #36C5F0;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px 0;
+  overflow-x: hidden;
+  /* margin-right: 20px; */
+}
+
+
+#messageImg {
+  max-width: 200px;
+  width: 100%;
+}
+
+.messageContent p {
+  color: #1c1818;
+  margin: 0px;
+}
+
+.messageContent span {
+  float: right;
+  bottom: 0;
+  color: black;
+  font-size: 12px;
+}
+
+.replyCount {
+  color: #6aef53;
+  margin: 0px;
+  font-size: 12px;
+  float: left;
+  padding-right: 10px;
+}
+
+/* send */
+.chat-page-send-container {
+  height: 25%;
+  width: 70%;
+  position: fixed;
+  z-index: 1;
+  top: 80%;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+
+.chat-page-send-form-container {
+  border-top: 2px solid ;
+  margin-right: 20px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+
+/*------REPLY THREAD------*/
+/*------REPLY THREAD------*/
+/*------REPLY THREAD------*/
+#replyThread {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  border-left: solid;
+  border-color: #111;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.thread-page-send-form-container {
+border-left: 2px;
+border-right: 2px;
+border-bottom: 2px;
+padding-top: 15px;
+padding-left: 15px;
+height: 20%;
+width: 23%;
+position: fixed;
+z-index: 1;
+bottom: 10%;
+right: 1%;
+background-color: white;
+overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+#replyThread {
+  width: 75%;
+}
+
+#replyThreadContainer {
+  width: 75%;
+}
+
+.thread-page-send-form-container {
+  width: 75%;
+}
+}
+
+
+#replyThreadTitle {
+color: #111;
+padding-left: 3px;
+}
+
+
+.replyThreadContent {
+background-color: #36C5F0;
+border-radius: 25px;
+padding: 10px;
+margin-left: 5px;
+margin: 10px 0;
+overflow-x: hidden;
+margin-right: 20px;
+}
+
+.replyThreadContent img {
+float: left;
+max-width: 30px;
+width: 100%;
+margin-right: 20px;
+border-radius: 50%;
+}
+
+.replyThreadContent p {
+color: black;
+margin: 0px;
+}
+
+.replyThreadContent span {
+float: right;
+color: black;
+font-size: 12px;
+}
+
+
+
+#threadReplyId {
+display: none;
+}
+
+#close-replies-button {
+z-index: 1;
+padding-bottom: 20px;
+}
+
+
+.reaction-container {
+  border-radius: 10px;
+  border: solid;
+  
+}
+
+
